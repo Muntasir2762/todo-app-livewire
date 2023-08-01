@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\ToDo;
+use App\Livewire\AboutMe;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', ToDo::class)->name('todo');
+Route::get('/about-me', AboutMe::class)->name('about_me');
